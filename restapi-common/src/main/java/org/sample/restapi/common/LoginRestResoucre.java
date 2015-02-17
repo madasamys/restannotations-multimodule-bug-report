@@ -33,18 +33,7 @@ public class LoginRestResoucre extends AbstractRestResource<JsonWebSerialDeseria
     {
         return new Authentication(CommonConstants.ACCESS_TOKEN);
     }
-
-    @MethodMapping(value = "/diagnostics/status", httpMethod = HttpMethod.POST)
-    public List<Connectivity> getStatus(@HeaderParam(value = "accessToken") String accessToken)
-    {
-        logger.info("Access token {}", accessToken);
-        List<Connectivity> connectivities = new ArrayList<Connectivity>();
-        if (accessToken.equalsIgnoreCase(CommonConstants.ACCESS_TOKEN)) {
-            connectivities.add(new Connectivity(9, 4));
-            connectivities.add(new Connectivity(19, 14));
-        }
-        return connectivities;
-    }
+    
 
     public class Authentication
     {
