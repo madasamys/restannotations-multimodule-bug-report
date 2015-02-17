@@ -59,36 +59,5 @@ public class LoginRestResoucre extends AbstractRestResource<JsonWebSerialDeseria
             this.accessToken = accessToken;
         }
     }
-
-    public class Connectivity
-    {
-        private int critical;
-        private int fatal;
-
-        public Connectivity(int critical, int fatal)
-        {
-            this.critical = critical;
-            this.fatal = fatal;
-        }
-
-        public int getCritical()
-        {
-            return critical;
-        }
-
-        public void setCritical(int critical)
-        {
-            this.critical = critical;
-        }
-
-        public int getFatal()
-        {
-            return fatal;
-        }
-
-        public void setFatal(int fatal)
-        {
-            this.fatal = fatal;
-        }
-    }
+  
 }
